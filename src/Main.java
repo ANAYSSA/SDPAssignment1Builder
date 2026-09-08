@@ -2,9 +2,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         DirectorPizza d = new DirectorPizza();
-        Pizza ExamplePizza = new Pizza.Builder().setName("Anuar").setSize("medium").setTemp(100).setVegan(false).build();
+        Pizza ExamplePizza = new Pizza.Builder()
+                .setName("Anuar")
+                .setSize("medium")
+                .setTemp(100)
+                .setVegan(false)
+                .build();
         System.out.println(ExamplePizza);
 
+
+        Pizza peperoni = d.makePepperoni();
+        System.out.println(peperoni);
         Scanner s = new Scanner(System.in);
 
         while(true){

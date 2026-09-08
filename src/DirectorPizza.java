@@ -9,6 +9,24 @@ public Pizza makeMargarita(){
     return builder.build();
 }
 
+
+public Pizza makePepperoni(){
+    Pizza.Builder builder = new Pizza.Builder();
+            builder.setName("Pepperoni");
+            builder.setSize("Medium");
+            builder.setTemp(200);
+            builder.setVegan(false);
+            return builder.build();
+}
+
+
+
+
+
+
+
+
+
 public Pizza makeOwn(String name,String size, String temp,boolean vegan ){
     Pizza.Builder builder = new Pizza.Builder();
     builder.setName(name);
