@@ -1,9 +1,12 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         DirectorPizza d = new DirectorPizza();
+        Pizza ExamplePizza = new Pizza.Builder().setName("Anuar").setSize("medium").setTemp(100).setVegan(false).build();
+        System.out.println(ExamplePizza);
+
         Scanner s = new Scanner(System.in);
+
         while(true){
             System.out.println("Choose option:");
             System.out.println("1)Make Margarita");
@@ -12,7 +15,6 @@ public class Main {
             int option = s.nextInt();
             if(option == 1){
                 Pizza marga = d.makeMargarita();
-                d.makeMargarita();
                 System.out.println(marga);
             }else if(option == 2){
                 System.out.println("Great lets start with name:");
@@ -23,7 +25,6 @@ public class Main {
                 String temp = s.next();
                 System.out.println("Vegan:");
                 boolean vegan = s.nextBoolean();
-                d.makeOwn(name,size,temp,vegan);
                 Pizza dd = d.makeOwn(name,size,temp,vegan);
 
 
