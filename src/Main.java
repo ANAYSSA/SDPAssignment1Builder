@@ -27,7 +27,6 @@ public class Main {
                 boolean vegan = s.nextBoolean();
                 Pizza dd = d.makeOwn(name,size,temp,vegan);
 
-
                 System.out.println(dd);
             }else if(option == 0){
                 break;
