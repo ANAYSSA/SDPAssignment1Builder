@@ -20,13 +20,6 @@ public Pizza makePepperoni(){
 }
 
 
-
-
-
-
-
-
-
 public Pizza makeOwn(String name,String size, String temp,boolean vegan ){
     Pizza.Builder builder = new Pizza.Builder();
     builder.setName(name);

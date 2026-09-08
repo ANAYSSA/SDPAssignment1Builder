@@ -3,7 +3,8 @@ private String name;
 private String size;
 private int temp;
 private boolean vegan;
-
+private static final int MIN_TEMP = 100;
+private static final int MAX_TEMP = 400;
 public Pizza(Builder builder){
     this.name = builder.name;
     this.size = builder.size;
@@ -53,7 +54,7 @@ public static class Builder{
     public Pizza build() {
         if (name == null || name.isBlank()
 
-                || temp < 100 || temp > 400) {
+                || temp < MIN_TEMP || temp > MAX_TEMP) {
 
             throw new IllegalArgumentException("Invalid pizza parameters");
         }
